@@ -8,7 +8,23 @@ const TodoList = () => {
     ];
 
     return (
-        <div>Todo List</div>
+        <table className="uk-table">
+            <caption>Lista de tarefas</caption>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Tarefa</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {
+                    todos?.map(
+                        todo => (<div key={todo.id}>{todo.title}</div>)
+                    )
+                }
+            </tbody>
+        </table>
     );
 }
 
